@@ -158,6 +158,6 @@ print(np.shape(y_pred), y_pred)
 test_label_norm = torch.reshape(test_label_norm, (-1,))
 test_label_norm = test_label_norm.cpu().detach().numpy()
 test_label = test_label_norm * std_label_train + rata_label_train
-dataframe = {'label': test_label, 'prediksi': y_pred}
+dataframe = {'label': test_label, 'prediction': y_pred}
 df = pd.DataFrame(data=dataframe)
 df.to_excel("wind.xlsx") 
